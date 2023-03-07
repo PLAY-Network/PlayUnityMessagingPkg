@@ -1,2 +1,2 @@
 # RGN Messaging
-version: 0.1.0-dev.106
+version: 0.1.0-dev.107
