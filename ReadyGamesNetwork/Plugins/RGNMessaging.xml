@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RGNMessaging</name>
+    </assembly>
+    <members>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.Subscribe(System.String,RGN.Modules.Messaging.IMessageReceiver)">
+            <summary>
+            Subscribes the <param name="messageReceiver"/> to the provided <param name="topic"/>"
+            </summary>
+            <param name="topic">Not null topic string to subscribe</param>
+            <param name="messageReceiver">Not null message receiver class instance to subsribe to the topic</param>
+        </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.Unsubscribe(System.String,RGN.Modules.Messaging.IMessageReceiver)">
+            <summary>
+            Unsubscribes the <param name="messageReceiver"/> from the provided <param name="topic"/>"
+            </summary>
+            <param name="topic">Not null topic string</param>
+            <param name="messageReceiver">Not null message receiver class instance</param>
+        </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.SendMessageByUserId(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Sends a message to provided user.
+            This method works only for admin users.
+            If the title and text are null or empty it will send a data message.
+            Data messages do not appear in the device system tray.
+            If the title and/or the text are provided, the ht
+            </summary>
+            <param name="appPackageName">The project id to send the message</param>
+            <param name="userId">The user id to send the message to</param>
+            <param name="payload">Any string (preferable json) with custom data
+            that will be attached to the message</param>
+            <param name="title">Optional. If provided, the message will appear in system tray
+            in case the application is in background</param>
+            <param name="text">Optional. If provided, the message will appear in system tray
+            in case the application is in background</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
