@@ -4,16 +4,71 @@
         <name>RGNMessaging</name>
     </assembly>
     <members>
+        <member name="T:RGN.Modules.Messaging.IMessageReceiver">
+            <summary>
+            Public interface to implement to receive messages from the backend.
+            </summary>
+        </member>
+        <member name="M:RGN.Modules.Messaging.IMessageReceiver.OnMessageReceived(System.String,RGN.Modules.Messaging.Message)">
+            <summary>
+            This method is called when a new message arrives from the backend or at the start of the app
+            </summary>
+            <param name="topic"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:RGN.Modules.Messaging.Message">
+            <summary>
+            This struct used to get messages from the backend
+            </summary>
+        </member>
+        <member name="P:RGN.Modules.Messaging.Message.Id">
+            <summary>
+            Unique id of the message
+            </summary>
+        </member>
+        <member name="P:RGN.Modules.Messaging.Message.Payload">
+            <summary>
+            Payload string to attach data to the message
+            This could be for example Json string
+            </summary>
+        </member>
+        <member name="M:RGN.Modules.Messaging.Message.ToString">
+            <summary>
+            Returns current values in as a string
+            </summary>
+            <returns>Current values as string</returns>
+        </member>
+        <member name="T:RGN.Modules.Messaging.MessagingModule">
+            <summary>
+            This module is responsible for sending and receiving Firebase Cloud Messages
+            </summary>
+        </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.SetRGNCore(RGN.IRGNRolesCore)">
+            <summary>
+            Sets the Ready Games Network (RGN) core reference.
+            </summary>
+            <param name="rgnCore">The RGN core to be set.</param>
+        </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.Init">
+            <summary>
+            Initializes the MessagingModule.
+            </summary>
+        </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.Dispose">
+            <summary>
+            Releases all resources used by the MessagingModule.
+            </summary>
+        </member>
         <member name="M:RGN.Modules.Messaging.MessagingModule.Subscribe(System.String,RGN.Modules.Messaging.IMessageReceiver)">
             <summary>
-            Subscribes the <param name="messageReceiver"/> to the provided <param name="topic"/>"
+            Subscribes the <see name="messageReceiver"/> to the provided <see name="topic"/>"
             </summary>
             <param name="topic">Not null topic string to subscribe</param>
             <param name="messageReceiver">Not null message receiver class instance to subsribe to the topic</param>
         </member>
         <member name="M:RGN.Modules.Messaging.MessagingModule.Unsubscribe(System.String,RGN.Modules.Messaging.IMessageReceiver)">
             <summary>
-            Unsubscribes the <param name="messageReceiver"/> from the provided <param name="topic"/>"
+            Unsubscribes the <see name="messageReceiver"/> from the provided <see name="topic"/>"
             </summary>
             <param name="topic">Not null topic string</param>
             <param name="messageReceiver">Not null message receiver class instance</param>
