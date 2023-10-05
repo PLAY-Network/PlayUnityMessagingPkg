@@ -75,7 +75,7 @@
             Data messages do not appear in the device system tray.
             If the title and/or the text are provided, the ht
             </summary>
-            <param name="appPackageName">The project id to send the message</param>
+            <param name="appId">The project id to send the message</param>
             <param name="userId">The user id to send the message to</param>
             <param name="payload">Any string (preferable json) with custom data
             that will be attached to the message</param>
