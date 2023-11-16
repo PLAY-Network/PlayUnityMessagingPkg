@@ -1,4 +1,4 @@
-using RGN.ImplDependencies.Attributes;
+using RGN.Attributes;
 using RGN.ImplDependencies.Core.Messaging;
 using System;
 using System.Collections.Generic;
