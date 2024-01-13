@@ -1,2 +1,2 @@
 # RGN Messaging
-Package version: 0.9.0-dev.476
+Package version: 0.9.0-dev.477
