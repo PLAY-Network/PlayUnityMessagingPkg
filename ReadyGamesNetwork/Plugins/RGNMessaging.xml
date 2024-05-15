@@ -67,7 +67,7 @@
             <param name="topic">Not null topic string</param>
             <param name="messageReceiver">Not null message receiver class instance</param>
         </member>
-        <member name="M:RGN.Modules.Messaging.MessagingModule.SendMessageByUserId(System.String,System.String,System.String,System.String,System.String)">
+        <member name="M:RGN.Modules.Messaging.MessagingModule.SendMessageByUserId(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Sends a message to provided user.
             This method works only for admin users.
@@ -83,6 +83,7 @@
             in case the application is in background</param>
             <param name="text">Optional. If provided, the message will appear in system tray
             in case the application is in background</param>
+            <param name="cancellationToken">A token to cancel the operation.</param>
             <returns></returns>
         </member>
     </members>
