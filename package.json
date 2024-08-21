@@ -1,7 +1,7 @@
 ﻿{
   "name": "io.getready.rgn.messaging",
   "displayName": "Ready Games Network SDK. Messaging",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "unity": "2020.3",
   "description": "The Ready Games Network (RGN) is building mobile-first Web3 tools and technologies to democratize access to game creation.",
   "author": {
@@ -26,6 +26,6 @@
     "/ReadyGamesNetwork.meta"
   ],
   "dependencies": {
-    "io.getready.rgn.core": "0.10.0"
+    "io.getready.rgn.core": "0.11.0"
   }
 }
