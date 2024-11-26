@@ -9,11 +9,10 @@
             Public interface to implement to receive messages from the backend.
             </summary>
         </member>
-        <member name="M:RGN.Modules.Messaging.IMessageReceiver.OnMessageReceived(System.String,RGN.Modules.Messaging.Message)">
+        <member name="M:RGN.Modules.Messaging.IMessageReceiver.OnMessageReceived(RGN.Modules.Messaging.Message)">
             <summary>
             This method is called when a new message arrives from the backend or at the start of the app
             </summary>
-            <param name="topic"></param>
             <param name="message"></param>
         </member>
         <member name="T:RGN.Modules.Messaging.Message">
@@ -30,6 +29,11 @@
             <summary>
             Payload string to attach data to the message
             This could be for example Json string
+            </summary>
+        </member>
+        <member name="P:RGN.Modules.Messaging.Message.Channel">
+            <summary>
+            The channel where the message was posted. Could be null or empty
             </summary>
         </member>
         <member name="M:RGN.Modules.Messaging.Message.ToString">
@@ -53,18 +57,16 @@
             Releases all resources used by the MessagingModule.
             </summary>
         </member>
-        <member name="M:RGN.Modules.Messaging.MessagingModule.Subscribe(System.String,RGN.Modules.Messaging.IMessageReceiver)">
+        <member name="M:RGN.Modules.Messaging.MessagingModule.Subscribe(RGN.Modules.Messaging.IMessageReceiver)">
             <summary>
-            Subscribes the <see name="messageReceiver"/> to the provided <see name="channel"/>"
+            Subscribes the <see name="messageReceiver"/> to recieve messages"
             </summary>
-            <param name="channel">Not null channel string to subscribe</param>
-            <param name="messageReceiver">Not null message receiver class instance to subsribe to the channel</param>
+            <param name="messageReceiver">Not null message receiver class instance to subsribe</param>
         </member>
-        <member name="M:RGN.Modules.Messaging.MessagingModule.Unsubscribe(System.String,RGN.Modules.Messaging.IMessageReceiver)">
+        <member name="M:RGN.Modules.Messaging.MessagingModule.Unsubscribe(RGN.Modules.Messaging.IMessageReceiver)">
             <summary>
-            Unsubscribes the <see name="messageReceiver"/> from the provided <see name="channel"/>"
+            Unsubscribes the <see name="messageReceiver"/> from the receiving messages/>"
             </summary>
-            <param name="channel">Not null channel string</param>
             <param name="messageReceiver">Not null message receiver class instance</param>
         </member>
         <member name="M:RGN.Modules.Messaging.MessagingModule.SendMessageByUserId(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
