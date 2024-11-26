@@ -55,19 +55,19 @@
         </member>
         <member name="M:RGN.Modules.Messaging.MessagingModule.Subscribe(System.String,RGN.Modules.Messaging.IMessageReceiver)">
             <summary>
-            Subscribes the <see name="messageReceiver"/> to the provided <see name="topic"/>"
+            Subscribes the <see name="messageReceiver"/> to the provided <see name="channel"/>"
             </summary>
-            <param name="topic">Not null topic string to subscribe</param>
-            <param name="messageReceiver">Not null message receiver class instance to subsribe to the topic</param>
+            <param name="channel">Not null channel string to subscribe</param>
+            <param name="messageReceiver">Not null message receiver class instance to subsribe to the channel</param>
         </member>
         <member name="M:RGN.Modules.Messaging.MessagingModule.Unsubscribe(System.String,RGN.Modules.Messaging.IMessageReceiver)">
             <summary>
-            Unsubscribes the <see name="messageReceiver"/> from the provided <see name="topic"/>"
+            Unsubscribes the <see name="messageReceiver"/> from the provided <see name="channel"/>"
             </summary>
-            <param name="topic">Not null topic string</param>
+            <param name="channel">Not null channel string</param>
             <param name="messageReceiver">Not null message receiver class instance</param>
         </member>
-        <member name="M:RGN.Modules.Messaging.MessagingModule.SendMessageByUserId(System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
+        <member name="M:RGN.Modules.Messaging.MessagingModule.SendMessageByUserId(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Sends a message to provided user.
             This method works only for admin users.
@@ -75,7 +75,7 @@
             Data messages do not appear in the device system tray.
             If the title and/or the text are provided, the ht
             </summary>
-            <param name="appId">The project id to send the message</param>
+            <param name="appIds">The project ids to send the message</param>
             <param name="userId">The user id to send the message to</param>
             <param name="payload">Any string (preferable json) with custom data
             that will be attached to the message</param>
@@ -83,6 +83,7 @@
             in case the application is in background</param>
             <param name="text">Optional. If provided, the message will appear in system tray
             in case the application is in background</param>
+            <param name="channel">Topic to send the message to. User the userId or the channel, but not both</param>
             <param name="cancellationToken">A token to cancel the operation.</param>
             <returns></returns>
         </member>
