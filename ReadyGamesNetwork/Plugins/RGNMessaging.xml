@@ -69,6 +69,35 @@
             </summary>
             <param name="messageReceiver">Not null message receiver class instance</param>
         </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.TopicSubscribeAsync(System.String)">
+            <summary>
+            Subscribes the <see name="topic"/> to recieve messages for specific topic"
+            </summary>
+            <param name="topic">The topic name to listen to</param>
+        </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.TopicUnubscribeAsync(System.String)">
+            <summary>
+            Unsubscribes from the <see name="topic"/> to stop to recieve messages for specific topic"
+            </summary>
+            <param name="topic">The topic name to listen to</param>
+        </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.RequestPermissionAsync">
+            <summary>
+            Explicitly requests the permission from the user to send messages
+            Works only on Android and iOS
+            Does nothing in case the permission is already given.
+            </summary>
+        </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.GetTokenAsync">
+            <summary>
+            Returns the user messaging token
+            </summary>
+        </member>
+        <member name="M:RGN.Modules.Messaging.MessagingModule.DeleteTokenAsync">
+            <summary>
+            Removes the user messaging token from device
+            </summary>
+        </member>
         <member name="M:RGN.Modules.Messaging.MessagingModule.SendMessageByUserId(System.Collections.Generic.List{System.String},System.String,System.String,System.String,System.String,System.String,System.Threading.CancellationToken)">
             <summary>
             Sends a message to provided user.
