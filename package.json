@@ -1,5 +1,5 @@
 ﻿{
-  "name": "io.play.unity.messaging",
+  "name": "network.theplay.unity.messaging",
   "displayName": "PLAY SDK. Messaging",
   "version": "0.16.0",
   "unity": "2020.3",
@@ -26,6 +26,6 @@
     "/ReadyGamesNetwork.meta"
   ],
   "dependencies": {
-    "io.play.unity.core": "0.16.0"
+    "network.theplay.unity.core": "0.16.0"
   }
 }
